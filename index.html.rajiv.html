@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajiv Tamang | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:scale-105 transition-transform">
+                    RT
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block leading-tight">Rajiv Tamang</span>
+                    <span class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">Seoul Theological Univ.</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
+                <a href="#interests" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Interests</a>
+                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle theme" class="p-2.5 rounded-xl bg-slate-200/60 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-200">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" aria-label="Open Menu" class="md:hidden p-2.5 rounded-xl bg-slate-200/60 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-3 pb-6 border-t border-slate-200 dark:border-slate-800 glass-card">
+            <div class="flex flex-col space-y-4 font-medium text-sm">
+                <a href="#about" class="mobile-link hover:text-indigo-600 transition-colors">About</a>
+                <a href="#education" class="mobile-link hover:text-indigo-600 transition-colors">Education</a>
+                <a href="#interests" class="mobile-link hover:text-indigo-600 transition-colors">Interests</a>
+                <a href="#projects" class="mobile-link hover:text-indigo-600 transition-colors">Projects</a>
+                <a href="#contact" class="mobile-link hover:text-indigo-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 relative overflow-hidden">
+        <!-- Ambient background glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/15 dark:bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800/80 text-indigo-700 dark:text-indigo-300 text-xs font-semibold shadow-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Open to Collaborations</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    Hi, I'm <span class="gradient-text">Rajiv Tamang</span>
+                </h1>
+                
+                <p class="text-slate-600 dark:text-slate-300 text-lg md:text-xl font-normal max-w-xl leading-relaxed mx-auto md:mx-0">
+                    Student at <strong class="text-slate-800 dark:text-slate-100 font-semibold">Seoul Theological University</strong>. Passionate about web development, cross-border strategies, and technology innovation.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-600/25 transition-all flex items-center space-x-2">
+                        <span>Get in Touch</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-semibold transition-all">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- Avatar Frame -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden glass-card p-2 flex flex-col items-center justify-center shadow-2xl">
+                        <div class="w-full h-full rounded-2xl bg-gradient-to-br from-slate-100 to-indigo-50 dark:from-slate-900 dark:to-slate-800 flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-5 dark:opacity-10 pointer-events-none">
+                                <i data-lucide="code-2" class="w-72 h-72"></i>
+                            </div>
+                            <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center text-white mb-4 shadow-lg">
+                                <i data-lucide="user" class="w-14 h-14"></i>
+                            </div>
+                            <span class="font-bold text-slate-800 dark:text-slate-100 text-xl tracking-tight">Rajiv Tamang</span>
+                            <span class="text-xs text-indigo-600 dark:text-indigo-400 mt-1 font-semibold flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Bucheon / Seoul, S. Korea
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">About Me</h2>
+                <p class="text-slate-600 dark:text-slate-400">Discover my background, current academic journey, and cross-cultural perspective.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">University Life</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Currently studying at <strong class="text-slate-800 dark:text-slate-200">Seoul Theological University</strong>, gaining strong academic foundation and exploring modern technologies.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                        <i data-lucide="globe-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">Location & Culture</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Based in the vibrant capital area of <strong class="text-slate-800 dark:text-slate-200">Seoul/Bucheon</strong>, absorbing South Korea's fast-paced tech ecosystem and international atmosphere.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                        <i data-lucide="languages" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">Multilingual</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Actively practicing and communicating across languages including <strong class="text-slate-800 dark:text-slate-200">English, Korean, and Nepali</strong> for global collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Education & Academic Background</h2>
+                <p class="text-slate-600 dark:text-slate-400">My academic foundation and educational institution in South Korea.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="glass-card p-8 rounded-2xl shadow-md border-l-4 border-l-indigo-600 relative overflow-hidden">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase">Higher Education</span>
+                            <h3 class="text-2xl font-bold mt-1">Seoul Theological University</h3>
+                        </div>
+                        <span class="px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 text-xs font-semibold self-start sm:self-center">
+                            Present Student
+                        </span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                        Enrolled in degree coursework at Seoul Theological University in Bucheon, Gyeonggi-do, South Korea. Developing analytical capabilities, cross-border research interests, and modern technical knowledge.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/80 dark:border-slate-800">
+                        <span class="text-xs px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Bucheon, South Korea</span>
+                        <span class="text-xs px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Academic Research</span>
+                        <span class="text-xs px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">Global Exchange</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="py-20 px-6 bg-slate-100/50 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Areas of Interest</h2>
+                <p class="text-slate-600 dark:text-slate-400">Key technology domains, academic disciplines, and personal pursuits I am passionate about.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Interest Card 1 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Web Dev & Coding</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Building responsive web interfaces with HTML/CSS and exploring programming foundations in C and Ruby.
+                    </p>
+                </div>
+
+                <!-- Interest Card 2 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">International Business</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Interested in global enterprise growth strategies, herbal product exports, and cross-border trade models.
+                    </p>
+                </div>
+
+                <!-- Interest Card 3 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="mic" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Language Practice</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Dedicating time to English fluency (IELTS prep) and daily Korean language translation exercises.
+                    </p>
+                </div>
+
+                <!-- Interest Card 4 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Apple & Tech</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Enthusiastic about macOS productivity tools, modern UI design standards, and hardware innovations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Projects & Initiative Works</h2>
+                <p class="text-slate-600 dark:text-slate-400">Selected personal projects and strategic concepts I have created.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-semibold">Web Application</span>
+                            <i data-lucide="layout" class="w-5 h-5 text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Personal Portfolio Site</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            A modern, responsive portfolio website built with HTML, Tailwind CSS, Lucide Icons, and dark mode controls.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">HTML5</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">Tailwind</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-950 text-violet-700 dark:text-violet-300 text-xs font-semibold">Language Tool</span>
+                            <i data-lucide="mic" class="w-5 h-5 text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">IELTS Speaking Helper</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            A practice cue card generator and timer designed for international students working on speaking fluency.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">JavaScript</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">CSS3</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">UI UX</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-semibold">Business Strategy</span>
+                            <i data-lucide="trending-up" class="w-5 h-5 text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Herbal Soap Business Plan</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Research proposal outlining cross-border market entry strategies for eco-friendly Himalayan herbal soap products.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">Research</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800 font-medium">Market Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-slate-100/50 dark:bg-slate-900/50 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl font-bold tracking-tight">Get In Touch</h2>
+                <p class="text-slate-600 dark:text-slate-400">Send me a message or connect through social channels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Info Side -->
+                <div class="md:col-span-5 glass-card p-8 rounded-2xl shadow-sm space-y-6">
+                    <h3 class="text-xl font-bold">Contact Details</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center space-x-3 text-slate-600 dark:text-slate-300">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Email</span>
+                                <a href="mailto:rajiv.tamang@stu.ac.kr" class="font-medium hover:text-indigo-600 transition-colors">rajiv.tamang@stu.ac.kr</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-slate-600 dark:text-slate-300">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Institution</span>
+                                <span class="font-medium">Seoul Theological University, Bucheon</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex space-x-3">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="p-2.5 rounded-xl bg-slate-200/70 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="md:col-span-7 glass-card p-8 rounded-2xl shadow-sm">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-600 text-sm transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-600 text-sm transition-colors" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-indigo-600 text-sm transition-colors resize-none" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-600/25 transition-all flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+
+                    <!-- Alert message -->
+                    <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-sm flex items-center space-x-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 shrink-0"></i>
+                        <span>Thank you! Your message has been submitted.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 px-6 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Rajiv Tamang. All rights reserved.</p>
+            <p class="flex items-center space-x-1">
+                <span>Seoul Theological University Student Portfolio</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 p-3 rounded-xl bg-indigo-600 text-white shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-indigo-700 z-40">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Theme Toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Back to Top button visibility
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Contact Form handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('form-success');
+            successBox.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

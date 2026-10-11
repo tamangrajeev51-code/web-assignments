@@ -1,0 +1,50 @@
+/* ==========================================
+   Rajiv Tamang Portfolio Stylesheet
+   ========================================== */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* bg-slate-50 */
+    color: #1e293b;            /* text-slate-800 */
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Dark Mode Body */
+.dark body, 
+html.dark body {
+    background-color: #020617; /* bg-slate-950 */
+    color: #f1f5f9;            /* text-slate-100 */
+}
+
+/* Glass Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Dark Mode Glass Card */
+.dark .glass-card,
+html.dark .glass-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
